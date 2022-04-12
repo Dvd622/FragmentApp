@@ -24,12 +24,12 @@ public class MainActivity extends AppCompatActivity {
 
     public void imageOneButtonClick(View view) {
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.add(R.id.fragmentContainerView, ImageFragment.class, null);
+        fragmentTransaction.replace(R.id.fragmentContainerView, ImageFragment.class, null);
         fragmentTransaction.commit();
     }
     public void imageTwoButtonClick(View view) {
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.add(R.id.fragmentContainerView, Image2Fragment.class, null);
+        fragmentTransaction.replace(R.id.fragmentContainerView, Image2Fragment.class, null);
         fragmentTransaction.addToBackStack("App");
         fragmentTransaction.commit();
     }
